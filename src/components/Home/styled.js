@@ -16,7 +16,20 @@ const HomeContainer = styled.div`
     margin: 70px 50px 110px;
     padding: 20px;
     color: white;
+    animation: moveX 1s ease;
   }
+
+  @keyframes moveX {
+    0% {
+      transform: translateX(-300px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+      }
+  }
+
   div.home-content h1{
     font-style: italic;
     padding: 10px 0;
@@ -52,10 +65,26 @@ const HomeContainer = styled.div`
     font-weight:bold;
     color: #0554F2;
     height: 35px;
+    font-size: 18px;
+    cursor: pointer;
   }
   div.form-model{
     display:flex;
     flex-direction:column;
+  }
+  .background-home{
+    animation: moveX-Right 1.3s ease;
+  }
+  
+  @keyframes moveX-Right {
+    0% {
+      transform: translateX(300px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+      }
   }
   @media(max-width:1050px){
     div.background-home img{
